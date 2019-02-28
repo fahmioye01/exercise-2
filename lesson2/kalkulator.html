@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+     <div class="bg-dark full"> 
+      <h1 class="text-center text-light">Kalkulator</h1>
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <div class="input-group-prepend put">
+            <span class="input-group-text" id="inputGroup-sizing-sm" name="bil1">Angka Pertama</span>
+        </div>
+        <input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="bil1">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm" name="bil2">Angka Kedua</span>
+        </div>
+        <input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="bil2">
+        <div class="button">
+            <button class="btn btn-secondary btn-sm active" role="button" aria-pressed="true" value="+"onclick="tambah()">+</button>
+            <button class="btn btn-secondary btn-sm active" role="button" aria-pressed="true" value="-"onclick="kurang()">-</button>
+            <button class="btn btn-secondary btn-sm active" role="button" aria-pressed="true" value="X"onclick="kali()">X</button>
+            <button class="btn btn-secondary btn-sm active" role="button" aria-pressed="true" value="/"onclick="bagi()">/</button>
+        </div>
+
+        
+        </div>
+        </div>
+      </div>
+    </div> 
+    
+
+    <script>
+      function tambah() {
+        var bil1 = document.getElementById('bil1').value;
+        var bil2 = document.getElementById('bil2').value;
+        var jumlah = eval(bil1)+eval(bil2);
+        alert("Hasilnya " + jumlah);
+      }
+      function kurang() {
+        var bil1 = document.getElementById('bil1').value;
+        var bil2 = document.getElementById('bil2').value;
+        var jumlah = eval(bil1) - eval(bil2);
+        alert("Hasilnya " + jumlah);
+      }
+      function bagi() {
+        var bil1 = document.getElementById('bil1').value;
+        var bil2 = document.getElementById('bil2').value;
+        var jumlah = eval(bil1) / eval(bil2);
+        alert("Hasilnya " + jumlah);
+      }
+      function kali() {
+        var bil1 = document.getElementById('bil1').value;
+        var bil2 = document.getElementById('bil2').value;
+        var jumlah = eval(bil1) * eval(bil2);
+        alert("Hasilnya " + jumlah);
+      }
+    </script>
+  </body>
+</html>
